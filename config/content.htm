@@ -1,6 +1,8 @@
 <h1>About</h1>
 <p></p>
-<p>這個倉儲位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 是一個能夠與 Github Pages, Gitlab Pages 以及 Heroku 結合的網際內容管理系統.</p><h1>Hint</h1>
+<p>這個倉儲位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 是一個能夠與 Github Pages, Gitlab Pages 以及 Heroku 結合的網際內容管理系統.</p>
+<h2>W8</h2>
+<p><a href="https://www.kaggle.com/mdecourse/cp2020w8">https://www.kaggle.com/mdecourse/cp2020w8</a> </p><h1>Hint</h1>
 <ol>
 <li>是否了解如何設定 Github Pages?</li>
 <li>是否了解如何設定 Gitlab Pages?</li>
@@ -48,10 +50,10 @@ variables:
 <p></p><h2>CMSiMDE 程式架構</h2>
 <p>動態網頁的主要檔案為 config/content.htm</p>
 <p>當使用者在命令列中將目錄更換到 cmsimde, 然後以 python wsgi.py 執行 wsgi.py 程式時, 其實 Python 程式是仰賴 Flask 網際框架結構來進行資料伺服.</p>
-<p>CMSiMDE 的作動需要 Flask 網際框架, 需要 bs4 與 lxml 進行 content.htm 的頁面解讀, 透過超文件檔案中的 h1, h2 與 h3 由上到下執行循序式分頁, 之後再透過 Javascript 與 css 將 h1, h2, h3 依照樹狀結構, h1 標題為第一階, h2 為第二階, h3 為第三階.</p><h3>為何需要網際內容管理</h3>
+<p>CMSiMDE 的作動需要 Flask 網際框架, 需要 bs4 與 lxml 進行 content.htm 的頁面解讀, 透過超文件檔案中的 h1, h2 與 h3 由上到下執行循序式分頁, 之後再透過 Javascript 與 css 將 h1, h2, h3 依照樹狀結構, h1 標題為第一階, h2 為第二階, h3 為第三階.</p><h2>為何需要網際內容管理</h2>
 <p>全球資訊網無遠弗屆, 而且 WWW 的伺服架構相對於手機 APP 對於使用者而言更加友善, 除了允許多重身分無需實名綁定之外, 可以讓工程師進行各種協同設計, 因此若能廣泛利用網際環境建立各種應用程式環境, 將有助提升設計效益.</p><h3>如何建立 CMSiMDE 子模組</h3>
 <p>git submodule add <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a> cmsimde</p>
-<p>表示要透過 git submodule add 將 <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a> 遠端倉儲當作子模組, 而且將資料存入子目錄 cmsimde 中.</p><h3>為何需要以子模組的設計</h3>
+<p>表示要透過 git submodule add 將 <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a> 遠端倉儲當作子模組, 而且將資料存入子目錄 cmsimde 中.</p><h3>為何需要以子模組的設計3</h3>
 <p>在一個倉儲中帶有子模組的用意是善用分散式設計的做法, 子模組代表一個非由倉儲管理者維護權限所及的單位模組. 意即, 倉儲中程式的執行需要子模組中的資料, 但是倉儲擁有者將子模組視為獨立元件, 並不需要對子模組的內容進行改版. 一旦子模組原始倉儲資料更新, 採用子模組的各倉儲所有者可以決定是否配合跟進, 若不跟進仍有使用既有版本的子模組繼續運作, 原始子模組與採用不同版本子模組的倉儲都不會彼此受到影響.</p><h3>兩種不同的 git clone</h3>
 <p>git clone <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a></p>
 <p>表示要將 cmsimde 倉儲的資料 clone 到近端, 針對沒有子模組設置的倉儲可以直接以 git clone 取下倉儲資料</p>
